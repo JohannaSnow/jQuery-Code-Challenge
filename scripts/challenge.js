@@ -37,7 +37,7 @@ $('[data-color="red"]').on('click', function(){
 redButtonCount++;
 console.log('redButtonCount:', redButtonCount);
 //update total red paragraph
-$('#red').html('Total red: ' + redButtonCount);
+$('#redButton').html('Total red: ' + redButtonCount);
 });
  //end red
 
@@ -52,7 +52,7 @@ $('[data-color="yellow"]').on('click', function(){
 yellowButtonCount++;
 console.log('yellowButtonCount:', yellowButtonCount);
 //update total yellow paragraph
-$('#yellow').html('Total yellow: ' + yellowButtonCount);
+$('#yellowButton').html('Total yellow: ' + yellowButtonCount);
 }); //end yellow
 
 //Create green div on click
@@ -64,7 +64,7 @@ $('[data-color="green"]').on('click', function(){
 greenButtonCount++;
 console.log('greenButtonCount:', greenButtonCount);
 //update total green paragraph
-$('#green').html('Total green: ' + greenButtonCount);
+$('#greenButton').html('Total green: ' + greenButtonCount);
 });
 
 //Create blue div on click
@@ -76,17 +76,10 @@ $('[data-color="blue"]').on('click', function(){
 blueButtonCount++;
 console.log('blueButtonCount:', blueButtonCount);
 //update total blue paragraph
-$('#blue').html('Total blue: ' + blueButtonCount);
+$('#blueButton').html('Total blue: ' + blueButtonCount);
 });
 });
 
 // create function using a loop to count all the buttoncounts
 
 /// this doesn't have functionality. :(
-
-var updateCounts = function() {
-  for (var i = 0; i < $('#button p').length; i++) {
-       updateCounts += '<button class="redButton" data-id=' + i +'>' + colors[i].redButton + '</button>';
-}
- $( '#button' ).append( buttoncounts );
-};
